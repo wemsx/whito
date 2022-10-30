@@ -1,0 +1,23 @@
+
+mkdir sentences
+cd sentences
+mkdir raw
+cd raw
+node ../../utils/createFile/cf-raw.js
+
+cd ..
+mkdir hito-alpha
+cd hito-alpha
+node ../../utils/createFile/cf.js
+
+cd ../..
+
+cp utils/combine.js sentences/raw/c.js
+cd sentences/raw
+node c.js
+cd ../..
+cp sentences/raw/all.json sentences/all.json
+rm -rf sentences/raw/all.json
+rm -rf sentences/raw/c.js
+
+echo "已完成请求"
