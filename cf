@@ -1,23 +1,52 @@
-
+echo
+echo " ▄█     █▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████ ▀████    ▐████▀ "
+echo "███     ███   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███   ███▌   ████▀  "
+echo "███     ███   ███    █▀  ███   ███   ███   ███    █▀     ███  ▐███    "
+echo "███     ███  ▄███▄▄▄     ███   ███   ███   ███           ▀███▄███▀    "
+echo "███     ███ ▀▀███▀▀▀     ███   ███   ███ ▀███████████    ████▀██▄     "
+echo "███     ███   ███    █▄  ███   ███   ███          ███   ▐███  ▀███    "
+echo "███ ▄█▄ ███   ███    ███ ███   ███   ███    ▄█    ███  ▄███     ███▄  "
+echo " ▀███▀███▀    ██████████  ▀█   ███   █▀   ▄████████▀  ████       ███▄ "
+echo
+                                                                      
 mkdir sentences
 cd sentences
 mkdir raw
+mkdir raw-lite
 cd raw
 node ../../utils/createFile/cf-raw.js
+echo "已请求完所有的原始文件"
 
 cd ..
 mkdir hito-alpha
-cd hito-alpha
-node ../../utils/createFile/cf.js
+cd ..
+cp utils/delete/raw.js delete.js
+node delete.js
+echo "已完成文件压缩"
+rm -rf delete.js
+cd sentences
+cp ../utils/createFile/cf.js cf.js
+node cf.js
+echo "已创建适合于nodehito调用的文件夹"
+rm -rf cf.js
 
-cd ../..
+cd ..
 
-cp utils/combine.js sentences/raw/c.js
+cp utils/combine/combine.js sentences/raw/c.js
 cd sentences/raw
 node c.js
+echo "已创建集合文件"
+
 cd ../..
 cp sentences/raw/all.json sentences/all.json
 rm -rf sentences/raw/all.json
-rm -rf sentences/raw/c.js
+cp utils/combine/all.js sentences/raw-lite/c.js
+cd sentences/raw-lite
+node c.js
+cd ..
+cp raw-lite/all.json ./all.min.json
+rm -rf raw-lite
+rm -rf raw/c.js
+echo "已删除临时文件"
 
 echo "已完成请求"
