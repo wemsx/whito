@@ -8,7 +8,7 @@ for(let fileNum = 1; fileNum < jsonPath.length + 1; fileNum++){
   var json = require(path.join(__dirname, 'sentences/raw/' + jsonPath[fileNum - 1]));
 
   var deleteArr = ['id','creator', 'uuid', 'creator_uid', 'reviewer',  'created_at', 
-  'length','from_who','commit_from','type'];
+  'length','from_who','commit_from','type','from'];
 
   for(var i = 0; i < json.length; i++){
     for(var j = 0; j < deleteArr.length; j++){

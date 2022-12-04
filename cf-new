@@ -8,6 +8,7 @@ echo "███     ███   ███    █▄  ███   ███   █
 echo "███ ▄█▄ ███   ███    ███ ███   ███   ███    ▄█    ███  ▄███     ███▄  "
 echo " ▀███▀███▀    ██████████  ▀█   ███   █▀   ▄████████▀  ████       ███▄ "
 echo
+rm -rf sentences
                                                                       
 mkdir sentences
 cd sentences
@@ -20,7 +21,7 @@ echo "已请求完所有的原始文件"
 cd ..
 mkdir hito-alpha
 cd ..
-cp utils/delete/raw.js delete.js
+cp utils/raw.js delete.js
 node delete.js
 echo "已完成文件压缩"
 rm -rf delete.js
@@ -30,23 +31,12 @@ node cf.js
 echo "已创建适合于nodehito调用的文件夹"
 rm -rf cf.js
 
-cd ..
 
-cp utils/combine/combine.js sentences/raw/c.js
-cd sentences/raw
-node c.js
-echo "已创建集合文件"
-
-cd ../..
-cp sentences/raw/all.json sentences/all.json
-rm -rf sentences/raw/all.json
-cp utils/combine/all.js sentences/raw-lite/c.js
-cd sentences/raw-lite
-node c.js
+cp ../utils/all.js ./all.js
+node all
+rm -rf ./all.js
+cp ./all.json ./hito-alpha/all.json
 cd ..
-cp raw-lite/all.json ./all.min.json
-rm -rf raw-lite
-rm -rf raw/c.js
-echo "已删除临时文件"
+open .
 
 echo "已完成请求"
