@@ -36,6 +36,7 @@ cp ../utils/all.js ./all.js
 node all
 rm -rf ./all.js
 cp ./all.json ./hito-alpha/all.json
+rm -rf ./all.json
 cd ..
 open .
 

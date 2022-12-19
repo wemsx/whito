@@ -5,7 +5,9 @@ var path = require('path')
 jsonPath = ['a.json','b.json','c.json','d.json','e.json','f.json','g.json','h.json','i.json','j.json','k.json','l.json']
 for(let fileNum = 1; fileNum < jsonPath.length + 1; fileNum++){
 
-  var json = require(path.join(__dirname, 'sentences/raw/' + jsonPath[fileNum - 1]));
+  //var json = require(path.join(__dirname, 'sentences/raw/' + jsonPath[fileNum - 1]));
+  var prejson = fs.readFileSync(path.join(__dirname, 'sentences/raw/' + jsonPath[fileNum - 1]));
+  var json = JSON.parse(prejson)
 
   var deleteArr = ['id','creator', 'uuid', 'creator_uid', 'reviewer',  'created_at', 
   'length','from_who','commit_from','type','from'];
