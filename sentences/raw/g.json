@@ -1136,7 +1136,7 @@
   {
     "id": 827,
     "uuid": "94ded6ea-df4d-4eaa-bd9e-6c512a92c8c1",
-    "hitokoto": "如果你在的时候,会不会伸手拥抱我",
+    "hitokoto": "如果你在的时候，会不会伸手拥抱我。",
     "type": "g",
     "from": "星空",
     "from_who": "五月天",
@@ -1145,7 +1145,7 @@
     "reviewer": 0,
     "commit_from": "web",
     "created_at": "1478787580",
-    "length": 16
+    "length": 17
   },
   {
     "id": 828,
@@ -7810,5 +7810,33 @@
     "commit_from": "web",
     "created_at": "1650695932",
     "length": 33
+  },
+  {
+    "id": 8861,
+    "uuid": "ff22ee6a-2cfa-4a40-a656-0524ec4d0185",
+    "hitokoto": "我妄想能改变命运，可终究不离此痛。",
+    "type": "g",
+    "from": "不离此痛(我的世界地图)",
+    "from_who": "夜间闪烁工作室",
+    "creator": "wcz1459",
+    "creator_uid": 13629,
+    "reviewer": 1,
+    "commit_from": "web",
+    "created_at": "1670581237",
+    "length": 17
+  },
+  {
+    "id": 8877,
+    "uuid": "35537743-770a-4c5b-a4bc-cca8c64245b2",
+    "hitokoto": "思想比武器更有威力。我们是绝不会给敌人任何武器的。难道我们会让敌人有思想吗?",
+    "type": "g",
+    "from": "斯大林",
+    "from_who": null,
+    "creator": "Rusmere",
+    "creator_uid": 13057,
+    "reviewer": 1044,
+    "commit_from": "web",
+    "created_at": "1663514508",
+    "length": 38
   }
 ]

@@ -1,6 +1,6 @@
 {
   "name": "hito-bundles",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wemsx/hito-bundles.git"
+    "url": "git+https://github.com/wemsx/whito.git"
   },
   "author": "wemsx",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/wemsx/hito-bundles/issues"
+    "url": "https://github.com/wemsx/whito/issues"
   },
   "dependencies": {
     "request": "^2.88.2"
   },
-  "homepage": "https://github.com/wemsx/hito-bundles#readme"
+  "homepage": "https://github.com/wemsx/whito#readme"
 }
