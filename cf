@@ -38,6 +38,10 @@ rm -rf ./all.js
 cp ./all.json ./hito-alpha/all.json
 rm -rf ./all.json
 cd ..
+
+cp utils/cut.cjs ./cut.cjs
+node cut.cjs
+rm -rf cut.cjs
 open .
 
 echo "已完成请求"

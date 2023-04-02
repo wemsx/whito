@@ -10,7 +10,7 @@ for(let fileNum = 1; fileNum < jsonPath.length + 1; fileNum++){
   var json = JSON.parse(prejson)
 
   var deleteArr = ['id','creator', 'uuid', 'creator_uid', 'reviewer',  'created_at', 
-  'length','from_who','commit_from','type','from'];
+  'length','from_who','commit_from','type'];
 
   for(var i = 0; i < json.length; i++){
     for(var j = 0; j < deleteArr.length; j++){
