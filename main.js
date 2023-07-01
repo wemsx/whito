@@ -16,6 +16,9 @@ exports.get = (reqCdn, reqType, callback) => {
         case 'jsd':
             var cdn = `https://cdn.jsdelivr.net/npm/hito-bundles@${version}/sentences/hito-alpha/${type}.json`
             break;
+        /*case 'raw':
+            var cdn = `https://cdn.jsdelivr.net/npm/hito-bundles@${version}/sentences/hito-alpha/${type}.json`
+            break;*/
         case 'gcore':
             var cdn = `https://gcore.jsdelivr.net/npm/hito-bundles@${version}/sentences/hito-alpha/${type}.json`
             break;
@@ -35,7 +38,7 @@ exports.get = (reqCdn, reqType, callback) => {
             var cdn = `https://gcore.jsdelivr.net/npm/hito-bundles@${version}/sentences/hito-alpha/${type}.json`
             break;
     };
-    switch (type) { case 'a': var num = hitoRandom(0, 1301); break; case 'b': var num = hitoRandom(0, 83); break; case 'c': var num = hitoRandom(0, 553); break; case 'd': var num = hitoRandom(0, 1366); break; case 'e': var num = hitoRandom(0, 994); break; case 'f': var num = hitoRandom(0, 649); break; case 'g': var num = hitoRandom(0, 559); break; case 'h': var num = hitoRandom(0, 123); break; case '1': var num = hitoRandom(0, 679); break; case 'j': var num = hitoRandom(0, 67); break; case 'k': var num = hitoRandom(0, 164); break; case 'l': var num = hitoRandom(0, 14); break; case 'all': var num = hitoRandom(0, 6564); break; }
+    switch (type) { case 'a': var num = hitoRandom(0, 1304); break; case 'b': var num = hitoRandom(0, 83); break; case 'c': var num = hitoRandom(0, 555); break; case 'd': var num = hitoRandom(0, 1366); break; case 'e': var num = hitoRandom(0, 996); break; case 'f': var num = hitoRandom(0, 652); break; case 'g': var num = hitoRandom(0, 562); break; case 'h': var num = hitoRandom(0, 124); break; case '1': var num = hitoRandom(0, 680); break; case 'j': var num = hitoRandom(0, 67); break; case 'k': var num = hitoRandom(0, 166); break; case 'l': var num = hitoRandom(0, 14); break; case 'all': var num = hitoRandom(0, 6581); break; }
     axios.get(cdn)
         .then(function (res) {
             return callback(null, res.data.bundle[num].hitokoto);
