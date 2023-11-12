@@ -3,7 +3,7 @@ const request = require('request');
 
 var name = ['a','b','c','d','e','f','g','h','i','j','k','l'];
 
-var rej = function(name){request('https://fastly.jsdelivr.net/gh/hitokoto-osc/sentences-bundle@master/sentences/'+name+'.json', function(error, response, body){
+var rej = function(name){request('https://gcore.jsdelivr.net/gh/hitokoto-osc/sentences-bundle@master/sentences/'+name+'.json', function(error, response, body){
     if (!error && response.statusCode == 200){
         fs.appendFileSync('./'+name+'.json' , body , function(err){if(err){throw err;};});
         return;
